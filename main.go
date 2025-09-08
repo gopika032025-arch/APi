@@ -6,10 +6,12 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
-	dsn := "root:Gopika@2001@tcp(127.0.0.1:3306)/testdb?parseTime=true"
+	dsn := "root:Gopika@2001@tcp(127.0.0.1:3306)/sys?parseTime=true"
 
 	db, err := sql.Open("mysql", dsn)
 	if err != nil {
